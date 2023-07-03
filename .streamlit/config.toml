@@ -3,9 +3,6 @@ base="light"
 primaryColor="#9966FF"
 backgroundColor="#ffffff"
 secondaryBackgroundColor="#f8f1ed"
+font = "sans serif"
 
-<<<<<<< HEAD
-font = "sans serif"
-=======
-font = "sans serif"
->>>>>>> b6ffccf230f8577632c219e89dc55c5a605d2ec6
+
