@@ -1,0 +1,213 @@
+/* impórta a fonte */
+@font-face {
+    font-family: 'Barlow';
+    src: url('/Fonte/Barlow-SemiBold.ttf') format('truetype');
+    /* Adicione outras variações da fonte, se disponíveis */
+    /* src: url('fonts/barlow-bold.ttf') format('truetype'); */
+    /* src: url('fonts/barlow-italic.ttf') format('truetype'); */
+    /* src: url('fonts/barlow-bold-italic.ttf') format('truetype'); */
+  }
+  
+  @font-face {
+    font-family: 'Knockout';
+    src: url('Fonte/Knockout-Bold.ttf') format('truetype');
+    /* Adicione outras variações da fonte, se disponíveis */
+    /* src: url('fonts/barlow-bold.ttf') format('truetype'); */
+    /* src: url('fonts/barlow-italic.ttf') format('truetype'); */
+    /* src: url('fonts/barlow-bold-italic.ttf') format('truetype'); */
+  }
+
+
+/* cards iniciais para Barlow */ 
+
+
+.css-1wivap2 {
+    overflow-wrap: normal;
+    text-overflow: ellipsis;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    font-family: "Barlow", sans-serif;
+    line-height: normal;
+    vertical-align: middle;
+}
+/* paragráfos em Barlow */ 
+
+p, ol, ul, dl {
+    margin: 0px 0px 1rem;
+    padding: 0px;
+    font-size: 1rem;
+    font-weight: 400;
+    font-family: "Barlow";
+}
+
+
+
+/* fundo do simulador */
+
+[data-testid="stAppViewContainer"] {
+    background-color: #ffffff;
+    }
+
+/* barra do simulador */
+
+[data-testid="stSidebar"] {
+    background-color: #9966ff;
+    }
+
+/* título do simulador */
+
+span.css-10trblm.e16nr0p30 {
+    font-size: 46px;
+    font-family: 'Knockout', knockout;
+    color: #9966FF ;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* definindo BOdy */
+
+body {
+    font-family: 'Barlow';
+    }
+
+
+
+
+
+/* botão de cálculo da previsão */
+div.css-1vbkxwb.e16nr0p34 {
+    /* background-color: #CCCCCC;
+    border: 1px solid #CCCCCC; */
+    padding: 2% -1% 2% 1%;   /* primeiro elemento é altura, o segundo é a posição que o texto ocupa dentro do card, terceiro é altura, quarto é a largura   */ 
+    border-radius: 5px;    /*isso aqui deixa a borda redonda */
+    font-family: 'Barlow', barlow;
+    }
+
+/* categoria */
+div.css-16idsys.e16nr0p34 {
+    font-size: 48px;
+    font-family: 'Barlow', barlow;
+    color: #9966FF ;
+    font-weight: bold;
+    text-align: left;
+    }
+
+label.css-81oif8.effi0qh3 {
+    font-size: 48px;
+    font-family: 'Barlow', barlow;
+    color: #9966FF ;
+    font-weight: bold;
+    text-align: left;
+    }
+
+/* foguete */
+
+.center {
+    /* display: block;
+    margin-left: auto;
+    margin-right: auto; */
+    width: 38%;
+    height: 44%;
+    top: 125px;
+    left: 112px;
+  }
+
+/* Hide hamburger menu and footer */
+
+footer.css-164nlkn.egzxvld1 {
+    display: none;
+    }
+
+
+/* esconder ícone do git */
+
+button.css-nqowgj-edgvbvh3 {
+    display: none;
+    }
+
+div.css-1wbqy5l.e10z71041 {
+    display: none;
+    }
+
+div.css-14xtw13.e8zbici0 {
+    display: none;
+    }
+
+
+#MainMenu {visibility: hidden;}
+
+div[data-testid="stSidebarNav"] {display: none;}
+
+footer {visibility: hidden;}
+
+div [data-testid="stToolbar"] {display: none;}
+
+[data-testid="collapsedControl"] {display: none}
+
+footer {visibility: hidden;}       
+
+
+.st-bw {
+    background-color: rgb(63, 63, 63);
+    }
+    
+    [data-testid="collapsedControl"] {
+        display: none
+    }
+    footer {visibility: hidden;}
+    
+    .css-qriz5p:hover:enabled, .css-qriz5p:focus:enabled {
+    color: rgb(255, 255, 255);
+    background-color: rgb(153, 102, 255);
+    transition: none 0s ease 0s;
+    outline: none;
+}
+    img {
+    background-color: rgb(18, 19, 18);
+    }
+
+
+h1 {
+        font-family: "Barlow", sans-serif;
+        font-weight: 700;
+        color: rgb(49, 51, 63);
+        padding: 1.25rem 0px 1rem;
+        margin: 0px;
+        line-height: 1.2;
+    }
+
+
+
+
+
+
+.css-10trblm {
+        position: relative;
+        flex: 1 1 0%;
+        margin-left: calc(3rem);
+        font-family: "Barlow";
+}
+
+.css-10trblm.eqr7zpz0 {
+    font-family: "Knockout";
+    font-size: 25px;
+}
+
+
+.css-10trblm.eqr7zpz1 {
+    font-family: "Barlow";
+    font-size: 25px;
+}
+
+
+.st-bw {
+    background-color: #F8F1ED;
+}
+
+
+.css-16idsys p {
+    word-break: break-word;
+    margin-bottom: 0px;
+    font-size: 15px;
+    font-family: "Barlow"; }
