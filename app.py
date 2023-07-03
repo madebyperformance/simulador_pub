@@ -78,7 +78,7 @@ st.session_state["usuario"] = username
 st.session_state["assessor"] = nome
 st.session_state["logout"] = login_token
 
-st.subheader(f"Você está Utilizando o Email, {username}")
+st.write(f"Você está Utilizando o Email, {username}")
 
 st.write('')
 st.write('')
@@ -96,3 +96,7 @@ no_sidebar_style = """
     </style>
 """
 st.markdown(no_sidebar_style, unsafe_allow_html=True)
+
+
+with open(r'style.css') as f:
+    st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)

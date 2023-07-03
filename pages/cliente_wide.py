@@ -174,7 +174,7 @@ try:
             mycntnr = st.container()
             #st.dataframe(dark2)
             with mycntnr:
-                htmlstr = f"<p style='background-color: #9966ff; color: #000000; font-size: 16px; border-radius: 7px; padding-left: 8px; text-align: center'>Tabela de Ativos</style></p>"
+                htmlstr = f'''<p style='background-color: #9966ff;  font-family: "Knockout"; color: #000000; font-size: 20px; border-radius: 7px; padding-left: 8px; text-align: center'>Tabela de Ativos</style></p>'''
                 st.markdown(htmlstr, unsafe_allow_html=True)
 
                 dta1 = AgGrid(
@@ -282,7 +282,7 @@ try:
 
             mycntnr = st.container()
             with mycntnr:
-                htmlstr = f"<p style='background-color: #9966ff; color: #000000; font-size: 16px; border-radius: 7px; padding-left: 8px; text-align: center'>Tabela de Produtos</style></p>"
+                htmlstr = f'''<p style='background-color: #9966ff;  font-family: "Knockout"; color: #000000; font-size: 20px; border-radius: 7px; padding-left: 8px; text-align: center'>Tabela de Produtos</style></p>'''
                 st.markdown(htmlstr, unsafe_allow_html=True)
 
                 dta2 = AgGrid(
@@ -599,7 +599,7 @@ try:
                 
                 fig.data[0].textfont.color = "white"
                 fig.data[0].marker.color = "#9966ff"
-                fig.data[1].marker.color = "#482878"
+                fig.data[1].marker.color = "#EBFF70"
                 fig.update_xaxes(showgrid=False)
                 fig.update_yaxes(title=None)
                 #fig.update_traces(textposition="top center")
@@ -648,7 +648,7 @@ try:
                 fig.data[0].marker.color = "#9966ff"
                 fig.data[0]['showlegend']=True
                 fig['data'][0]['name']=final[(final["data"]>= inc1) & (final["data"]<= end1)]["Produtos"].iloc[0]
-                #fig.data[1].marker.color = "#482878"
+                #fig.data[1].marker.color = "#EBFF70"
                 fig.update_xaxes(showgrid=False)
                 fig.update_yaxes(title=None)
                 #fig.update_traces(textposition="top center")
@@ -860,7 +860,7 @@ try:
                 
                 fig.data[0].textfont.color = "white"
                 fig.data[0].marker.color = "#9966ff"
-                fig.data[1].marker.color = "#482878"
+                fig.data[1].marker.color = "#EBFF70"
                 fig.update_xaxes(showgrid=False)
                 fig.update_yaxes(title=None)
                 #fig.update_traces(textposition="top center")
@@ -909,7 +909,7 @@ try:
                 fig.data[0].marker.color = "#9966ff"
                 fig.data[0]['showlegend']=True
                 fig['data'][0]['name']=final1[(final1["data"]>= inc1) & (final1["data"]<= end1)]["Produtos"].iloc[0]
-                #fig.data[1].marker.color = "#482878"
+                #fig.data[1].marker.color = "#EBFF70"
                 fig.update_xaxes(showgrid=False)
                 fig.update_yaxes(title=None)
                 #fig.update_traces(textposition="top center")
@@ -1072,7 +1072,7 @@ try:
                 
                 fig.data[0].textfont.color = "white"
                 fig.data[0].marker.color = "#9966ff"
-                fig.data[1].marker.color = "#482878"
+                fig.data[1].marker.color = "#EBFF70"
                 fig.update_xaxes(showgrid=False)
                 fig.update_yaxes(title=None)
                 #fig.update_traces(textposition="top center")
@@ -1121,7 +1121,7 @@ try:
                 fig.data[0].marker.color = "#9966ff"
                 fig.data[0]['showlegend']=True
                 fig['data'][0]['name']=final2[(final2["data"]>= inc1) & (final2["data"]<= end1)]["Produtos"].iloc[0]
-                #fig.data[1].marker.color = "#482878"
+                #fig.data[1].marker.color = "#EBFF70"
                 fig.update_xaxes(showgrid=False)
                 fig.update_yaxes(title=None)
                 #fig.update_traces(textposition="top center")
@@ -1423,3 +1423,8 @@ try:
     # )
 except:
     nav_page('error')
+
+
+
+with open(r'style.css') as f:
+    st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)

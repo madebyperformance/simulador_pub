@@ -335,44 +335,9 @@ try:
     # url = st.secrets.url_add+"fields["+st.secrets.VAR4+f"]={categoria}&fields["+st.secrets.VAR5+f"]={produto}&fields["+st.secrets.VAR6+f"]={roa_head}&fields["+st.secrets.VAR7+f"]={roa_rec}&fields["+st.secrets.VAR8+f"]={pl_apl}&fields["+st.secrets.VAR9+f"]={data_inicial}&fields["+st.secrets.VAR10+f"]={data}&fields["+st.secrets.VAR11+f"]={v3}&fields["+st.secrets.VAR12+f"]={empresa}&fields["+st.secrets.VAR13+f"]={retorno}&fields["+st.secrets.VAR14+f"]={roa_reps}&fields["+st.secrets.category+"]="+st.secrets.arabian
     # st.write(url)
 
-    st.markdown(
-        """
-    <style>
-        div [data-testid="stToolbar"] {display: none;}
-        #MainMenu {visibility: hidden;}
-        [data-testid="collapsedControl"] {
-            display: none
-        }
-        footer {visibility: hidden;}
-    </style>
-    """,
-        unsafe_allow_html=True,
-    )
+    with open(r'style.css') as f:
+        st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
 
-    st.markdown(
-        """
-    <style>
-        .st-bw {
-        background-color: rgb(63, 63, 63);
-        }
-        [data-testid="collapsedControl"] {
-            display: none
-        }
-        footer {visibility: hidden;}
-
-        .css-qriz5p:hover:enabled, .css-qriz5p:focus:enabled {
-        color: rgb(255, 255, 255);
-        background-color: rgb(153, 102, 255);
-        transition: none 0s ease 0s;
-        outline: none;
-    }
-        img{
-        background-color: rgb(18, 19, 18);
-        }
-
-    </style>
-    """,
-        unsafe_allow_html=True,
-    )
+        
 except:
     nav_page('error')

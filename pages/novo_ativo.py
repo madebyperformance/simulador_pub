@@ -212,48 +212,10 @@ try:
         else:
             st.error("Data de vencimento tem que ser maior que a data de Início.")
 
-    st.markdown(
-        """
-    <style>
-        div [data-testid="stToolbar"] {display: none;}
-        #MainMenu {visibility: hidden;}
-        [data-testid="collapsedControl"] {
-            display: none
-        }
-        footer {visibility: hidden;}
-    </style>
-    """,
-        unsafe_allow_html=True,
-    )
-
-
-    st.markdown(
-        """
-    <style>
-        .st-bw {
-        background-color: rgb(63, 63, 63);
-        }
-        
-        [data-testid="collapsedControl"] {
-            display: none
-        }
-        footer {visibility: hidden;}
-        
-        .css-qriz5p:hover:enabled, .css-qriz5p:focus:enabled {
-        color: rgb(255, 255, 255);
-        background-color: rgb(153, 102, 255);
-        transition: none 0s ease 0s;
-        outline: none;
-    }
-        img {
-        background-color: rgb(18, 19, 18);
-        }
-
-
-    </style>
-    """,
-        unsafe_allow_html=True,
-    )
+    with open(r'style.css') as f:
+        st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
 except:
     nav_page('error')
     
+with open(r'style.css') as f:
+    st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)

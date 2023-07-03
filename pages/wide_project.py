@@ -65,7 +65,7 @@ if dark.empty:
 col1, mid, col2 = st.columns([20, 2, 5])
 with col1:
     st.write(
-        fr'<p style="font-size:26px;">BEM VINDO AO SIMULADOR, {st.session_state.assessor}</p>',
+        fr'''<p style='font-size:26px; font-family: "Knockout"'>Bem Vindo ao Simulador, {st.session_state.assessor}</p>''',
         unsafe_allow_html=True,
     )
 
@@ -334,7 +334,7 @@ face["porcem_repasse"] = face["porcem_repasse"] * 100.0
 
 for i in fair["ativo_id"].unique():
     df = fair[fair["ativo_id"] == i]
-    df = df.reset_index().drop("index", 1)
+    df = df.reset_index().drop('index', axis= 1)
 
     #st.dataframe(df)
     masquerede = face[
@@ -547,7 +547,7 @@ dark = dark.replace("R$ nan", "R$ 0")
 
 with cliente:
     # dark["PL Aplicado"] = dark["PL Aplicado"].apply(lambda x: "R$ " + str(x))
-    htmlstr = f"<p style='background-color: #9966ff; color: #000000; font-size: 16px; border-radius: 7px; padding-left: 8px; text-align: center'>Carteira de Clientes</style></p>"
+    htmlstr = f'''<p style='background-color: #9966ff;  font-family: "Knockout"; color: #000000; font-size: 20px; border-radius: 7px; padding-left: 8px; text-align: center'>Carteira de Clientes</style></p>'''
     st.markdown(htmlstr, unsafe_allow_html=True)
 
     gridOptions = GridOptionsBuilder.from_dataframe(
@@ -688,19 +688,9 @@ with botao_2:
 
 
 
-st.markdown(
-    """
-    <style>
-        #MainMenu {visibility: hidden;}
-        div[data-testid="stSidebarNav"] {display: none;}
-        footer {visibility: hidden;}
-        div [data-testid="stToolbar"] {display: none;}
-        [data-testid="collapsedControl"] {display: none}
-        footer {visibility: hidden;}        
-    </style>
-""",
-    unsafe_allow_html=True,
-)
+with open(r'style.css') as f:
+    st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
+
 #st.dataframe(super_smart)
 # chart1, chart2 = st.columns([6, 4])
 if super_smart.empty:
@@ -814,7 +804,7 @@ else:
                 
                 fig.data[0].textfont.color = "white"
                 fig.data[0].marker.color = "#9966ff"
-                fig.data[1].marker.color = "#482878"
+                fig.data[1].marker.color = "#EBFF70"
                 fig.update_xaxes(showgrid=False)
                 fig.update_yaxes(title=None)
                 #fig.update_traces(textposition="top center")
@@ -861,10 +851,10 @@ else:
                     hovertemplate='<extra></extra>'))
                 
                 fig.data[0].textfont.color = "white"
-                fig.data[0].marker.color = "#482878"
+                fig.data[0].marker.color = "#EBFF70"
                 fig.data[0]['showlegend']=True
                 fig['data'][0]['name']=super_smart[(super_smart["data"]>= inc) & (super_smart["data"]<= end)]['label'].iloc[0]
-                #fig.data[1].marker.color = "#482878"
+                #fig.data[1].marker.color = "#EBFF70"
                 fig.update_xaxes(showgrid=False)
                 fig.update_yaxes(title=None)
                 #fig.update_traces(textposition="top center")
