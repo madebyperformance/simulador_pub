@@ -64,11 +64,22 @@ if dark.empty:
 #st.write(st.session_state.usuario)
 col1, mid, col2 = st.columns([20, 2, 5])
 with col1:
-    st.write(
-        fr'''<p style='font-size:26px; font-family: "RoundkeyBold"'>Bem Vindo ao Simulador, {st.session_state.assessor}</p>''',
-        unsafe_allow_html=True,
+    st.markdown(
+        fr'''
+        <style>
+        @font-face {{
+            font-family: 'Knockout';
+            src: url('Fonte/Knockout-Bold.ttf') format('truetype'),
+            url('Fonte/Knockout-Bold.otf') format('opentype');
+            font-weight: normal;
+            font-style: normal;
+        }}
+        </style>
+        
+        <p style='font-size:26px; font-family: "Knockout"'>Bem Vindo ao Simulador, {st.session_state.assessor}</p>
+        ''',
+        unsafe_allow_html=True
     )
-
 with col2:
     st.image("investsmart_endosso_horizontal_fundopreto.png", width=270)
     esquerda, direita  = st.columns([5, 4])
