@@ -1,9 +1,9 @@
-/* impórta a fonte */
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;600&display=swap');
+
 @font-face {
     font-family: 'Barlow';
     src: url('Fonte/Barlow-SemiBold.ttf') format('truetype');
-    /* Adicione outras variações da fonte, se disponíveis */
-    /* src: url('fonts/barlow-bold.ttf') format('truetype'); */
+    /* Adicione outras variações da fonte, se disponíveis */ 
     /* src: url('fonts/barlow-italic.ttf') format('truetype'); */
     /* src: url('fonts/barlow-bold-italic.ttf') format('truetype'); */
   }
@@ -15,6 +15,7 @@
     font-weight: normal;
     font-style: normal;
   }
+
 
 
 
