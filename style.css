@@ -16,6 +16,18 @@
     font-style: normal;
   }
 
+/* Webfont: Roundkey-Bold */@font-face {
+    font-family: 'RoundkeyBold';
+    src: url('Roundkey-Bold.eot'); /* IE9 Compat Modes */
+    src: url('Roundkey-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('Roundkey-Bold.woff') format('woff'), /* Modern Browsers */
+         url('Roundkey-Bold.woff2') format('woff2'), /* Modern Browsers */
+         url('Roundkey-Bold.ttf') format('truetype'); /* Safari, Android, iOS */
+             font-style: normal;
+    font-weight: bold;
+    text-rendering: optimizeLegibility;
+}
+
 
 
 
@@ -60,7 +72,7 @@ p, ol, ul, dl {
 
 span.css-10trblm.e16nr0p30 {
     font-size: 46px;
-    font-family: 'Knockout', knockout;
+    font-family: 'Roundkey-Bold';
     color: #9966FF ;
     font-weight: bold;
     text-align: center;
@@ -191,7 +203,7 @@ h1 {
 }
 
 .css-10trblm.eqr7zpz0 {
-    font-family: "Knockout";
+    font-family: "Roundkey-Bold";
     font-size: 25px;
 }
 
@@ -217,7 +229,7 @@ h1 {
 
 span.css-10trblm.e16nr0p30 {
     font-size: 30px;
-    font-family: 'Knockout', knockout;
+    font-family: 'Roundkey-Bold';
     color: #000000;
     font-weight: bold;
     text-align: center;
