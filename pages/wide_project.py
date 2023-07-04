@@ -65,7 +65,7 @@ if dark.empty:
 col1, mid, col2 = st.columns([20, 2, 5])
 with col1:
     st.write(
-        fr'''<p style='font-size:26px; font-family: "Knockout"'>Bem Vindo ao Simulador, {st.session_state.assessor}</p>''',
+        fr'''<p style='font-size:26px; font-family: "RoundkeyBold"'>Bem Vindo ao Simulador, {st.session_state.assessor}</p>''',
         unsafe_allow_html=True,
     )
 
