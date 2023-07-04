@@ -11,9 +11,11 @@
   @font-face {
     font-family: 'Knockout';
     src: url('Fonte/Knockout-Bold.ttf') format('truetype'),
-    src: url('Fonte/Knockout-Bold.otf') format('opentype');
-
+    url('Fonte/Knockout-Bold.otf') format('opentype'); 
+    font-weight: normal;
+    font-style: normal;
   }
+
 
 
 /* cards iniciais para Barlow */ 
