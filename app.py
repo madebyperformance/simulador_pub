@@ -65,7 +65,7 @@ with text:
         st.write('')
         value=login_token['account']['name']
         st.write(
-        f'<p style="font-size:26px;">BEM VINDO/A,{value}</p>',
+        f'<p style="font-size:26px;">Bem Vindo/a,{value}</p>',
         unsafe_allow_html=True,
     )
         #st.subheader(f"BEM VINDO/A, {login_token['account']['name']}")
