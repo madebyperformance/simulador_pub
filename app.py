@@ -26,7 +26,7 @@ st.set_page_config(
     # layout="wide"
 )
 
-st.title('Simulador, Página de Login')
+st.title('Página de Login')
 
 text,botao =st.columns(2)
 
