@@ -194,8 +194,9 @@ try:
                     update_mode=GridUpdateMode.SELECTION_CHANGED,
                     columns_auto_size_mode=ColumnsAutoSizeMode.FIT_ALL_COLUMNS_TO_VIEW,
                     reload_data=True,
+                    custom_css=custom_css,
                     key="investsmart_grid"
-                    custom_css=custom_css
+                    
                 )
                 
             st.markdown(
@@ -304,7 +305,7 @@ try:
                     update_mode=GridUpdateMode.SELECTION_CHANGED,
                     columns_auto_size_mode=ColumnsAutoSizeMode.FIT_ALL_COLUMNS_TO_VIEW,
                     reload_data=True,
-                    key="besmart_grid"
+                    key="besmart_grid",
                     custom_css=custom_css
                 )
             st.markdown(
