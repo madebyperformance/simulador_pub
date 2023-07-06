@@ -15,17 +15,13 @@ import requests
 
 
 locale.setlocale(locale.LC_ALL, "pt_BR.UTF-8")
-custom_css = {
-                ".ag-theme-alpine": {
-                    "--ag-background-color": "#fff !important",
-                    "--ag-foreground-color": "#181d1f !important",
-                    "--ag-subheader-background-color": "#fff !important",
-                    "--ag-alpine-active-color": "#EBFF70 !important",
-                    "--ag-range-selection-border-color": "#EBFF70 !important",
-                    "font-family": ' "Barlow" !important'
-                }
-            } 
-
+custom_css = {".ag-theme-alpine": {
+            "--ag-background-color": "#fff !important",
+            "--ag-foreground-color": "#181d1f !important",
+            "--ag-subheader-background-color": "#fff !important",
+            "--ag-alpine-active-color": "#EBFF70 !important",
+            "--ag-range-selection-border-color": "#EBFF70 !important",
+            "font-family": ' "Barlow" !important'}}
 
 try:
     v3 = st.session_state.df_cliente.client_id[0]
