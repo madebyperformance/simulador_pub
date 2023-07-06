@@ -392,7 +392,7 @@ try:
 
             mycntnr = st.container()
             with mycntnr:
-                htmlstr = f"<p style='background-color: #9966ff; color: #000000; font-size: 16px; border-radius: 7px; padding-left: 8px; text-align: center'>Tabela de Ativos e Produtos</style></p>"
+                htmlstr = f"<p style='background-color: #9966ff; color: #000000;  font-family: "Knockout"; font-size: 16px; border-radius: 7px; padding-left: 8px; text-align: center'>Tabela de Ativos e Produtos</style></p>"
                 st.markdown(htmlstr, unsafe_allow_html=True)
 
                 dta = AgGrid(
