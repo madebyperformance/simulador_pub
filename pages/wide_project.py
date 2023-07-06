@@ -585,11 +585,11 @@ with cliente:
             "--ag-background-color": "#fff !important",
             "--ag-foreground-color": "#181d1f !important",
             "--ag-subheader-background-color": "#fff !important",
-            "--ag-alpine-active-color": "#EBFF70",
+            "--ag-alpine-active-color": "#EBFF70 !important",
             "--ag-range-selection-border-color": "#EBFF70 !important",
-            "fonte-family": 'Barlow'
+            "font-family": ' "Barlow" !important'
         }
-    }
+    } 
 
     dta = AgGrid(
         dark,
