@@ -580,6 +580,17 @@ with cliente:
     )
     gb = gridOptions.build()
 
+    custom_css = {
+        ".ag-theme-alpine": {
+            "--ag-background-color": "#fff !important",
+            "--ag-foreground-color": "#181d1f !important",
+            "--ag-subheader-background-color": "#fff !important",
+            "--ag-alpine-active-color": "#EBFF70",
+            "--ag-range-selection-border-color": "#EBFF70 !important",
+            "fonte-family": 'Barlow'
+        }
+    }
+
     dta = AgGrid(
         dark,
         gridOptions=gb,
@@ -590,6 +601,7 @@ with cliente:
         update_mode=GridUpdateMode.SELECTION_CHANGED,
         columns_auto_size_mode=ColumnsAutoSizeMode.FIT_ALL_COLUMNS_TO_VIEW,
         reload_data=True,
+        custom_css=custom_css
     )
 
 st.session_state["df_cliente"] = pd.DataFrame(dta["selected_rows"])
