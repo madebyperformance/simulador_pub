@@ -176,6 +176,16 @@ try:
             with mycntnr:
                 htmlstr = f'''<p style='background-color: #9966ff;  font-family: "Knockout"; color: #000000; font-size: 20px; border-radius: 7px; padding-left: 8px; text-align: center'>Tabela de Ativos</style></p>'''
                 st.markdown(htmlstr, unsafe_allow_html=True)
+                    custom_css = {
+                ".ag-theme-alpine": {
+                    "--ag-background-color": "#fff !important",
+                    "--ag-foreground-color": "#181d1f !important",
+                    "--ag-subheader-background-color": "#fff !important",
+                    "--ag-alpine-active-color": "#EBFF70 !important",
+                    "--ag-range-selection-border-color": "#EBFF70 !important",
+                    "font-family": ' "Barlow" !important'
+                }
+            } 
 
                 dta1 = AgGrid(
                     dark2,
@@ -189,7 +199,9 @@ try:
                     columns_auto_size_mode=ColumnsAutoSizeMode.FIT_ALL_COLUMNS_TO_VIEW,
                     reload_data=True,
                     key="investsmart_grid"
+                    custom_css=custom_css
                 )
+                
             st.markdown(
                 """
                 <hr style="height:1px;border:none;color:#9966ff;background-color:#9966ff;" /> 
