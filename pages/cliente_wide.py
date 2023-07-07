@@ -459,7 +459,7 @@ try:
         ):
 
             st.text("")
-            st.error("Esse Cliente não tem Portifólio")
+            st.error("")
         else:
             smart = pd.DataFrame(columns=["Mês", "Resultado assessor",'Faturamento','Resultado Bruto'])
             for i in dark["ativo_id"].unique():
