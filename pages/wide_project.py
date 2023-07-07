@@ -603,6 +603,20 @@ with cliente:
         reload_data=True,
         custom_css=custom_css
     )
+    @st.cache_data
+
+    def convert_df(df):
+     df = df[["Nome do Cliente","Data de Cadastro","Investimentos","Qnt. Ativos InvestSmart","Qnt. Produtos BeSmart",f"Comissão esperada {DT.datetime.now().year}",f"Comissão esperada {DT.datetime.now().year+1}"]]
+    
+     return df.to_csv(sep = ';', index=False).encode('utf-8-sig')
+    
+    csv = convert_df(dta["data"])
+
+    st.download_button(
+    label="Download",
+    data=csv,
+    file_name='clientes.csv',
+    mime='text/csv',)
 
 st.session_state["df_cliente"] = pd.DataFrame(dta["selected_rows"])
 
